@@ -12,18 +12,29 @@ header {
   padding: 10px 0px 10px 30px;
   text-align: center;
 }
+h1 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 main {
   position: block;
   background-color: #fff;
   padding: 30px;
 }
-#portfolio-images {
+.portfolio-thumbnails {
+  text-align: center;
+  display: inline-block;
+}
+.portfolio-container {
   text-align: center;
 }
 footer {
   background-color: #1B6479;
   font-size: 10px;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding: 20px 0px 20px 0px;
 }
