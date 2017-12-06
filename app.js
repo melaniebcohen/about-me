@@ -1,10 +1,11 @@
 'use strict';
 
+
 var userName = prompt('Thanks for visiting this page! What\'s your name?');
 console.log('User\'s name:',userName);
 
 alert('Welcome, ' + userName + '! We\'re going to play a guessing game. Get ready!');
-
+/*
 // first question
 var userHomeYorN = prompt('Yes or No: I am from Seattle, Washington.');
 userHomeYorN = userHomeYorN.toUpperCase();
@@ -59,3 +60,60 @@ if (userCareVolunteer === 'YES' || userCareVolunteer === 'Y') {
 } else if (userCareVolunteer === 'NO' || userCareVolunteer === 'N') {
   alert('False! I volunteer virtually for an animal sanctuary called CARE Rescue Texas. Random, I know.');
 };
+*/
+// sixth question that takes a numeric input to guess a number
+var favoriteNumber;
+var counter = 4;
+
+while (counter > 0) {
+  while (favoriteNumber !== 17) {
+    favoriteNumber = parseInt(prompt('What is my favorite number?'));
+    console.log('User guessed:',favoriteNumber);
+
+    if (favoriteNumber < 17) {
+      counter--;
+      alert('Sorry, too low! You have ' + counter + ' guesses left.');
+    } else if (favoriteNumber > 17) {
+      alert('Sorry, too high!');
+      counter--;
+    } else if (favoriteNumber === 17) {
+      alert('You are correct!');
+      break;
+    } else {
+      alert('That\'s not exactly a number, ' + userName + '.');
+      counter--;
+    };
+  };
+  console.log('User guessed this many times:',counter);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//foo
