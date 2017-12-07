@@ -4,7 +4,10 @@ var userName = prompt('Thanks for visiting this page! What\'s your name?');
 console.log('User\'s name:',userName);
 
 alert('Welcome, ' + userName + '! We\'re going to play a guessing game. Get ready!');
-/*
+
+// page tally for correct answers
+var correctAnswer = 0;
+
 // first question
 var userHomeYorN = prompt('Yes or No: I am from Seattle, Washington.');
 userHomeYorN = userHomeYorN.toUpperCase();
@@ -12,6 +15,8 @@ console.log('Am I from Seattle? User answered:',userHomeYorN);
 
 if (userHomeYorN === 'YES' || userHomeYorN === 'Y') {
   alert('That\'s correct, ' + userName + '. I am from Seattle.');
+  correctAnswer++;
+  console.log('User has this many correct answers:',correctAnswer);
 } else if (userHomeYorN === 'NO' || userHomeYorN === 'N') {
   alert('Not quite, ' + userName + '. I am indeed from Seattle.');
 };
@@ -25,6 +30,8 @@ if (userExercise === 'YES' || userExercise === 'Y') {
   alert('Not quite! My favorite form of exercise is actually weightlifting.');
 } else if (userExercise === 'NO' || userExercise === 'N') {
   alert('Correct, my favorite form of exercise is actually weightlifting rather than running.');
+  correctAnswer++;
+  console.log('User has this many correct answers:',correctAnswer);
 };
 
 // third question
@@ -36,6 +43,8 @@ if (userKids === 'YES' || userKids === 'Y') {
   alert('Wrong! Kids are great, but I have a niece and nephew to keep me entertained instead.');
 } else if (userKids === 'NO' || userKids === 'N') {
   alert('Correct, no kids for me. I\'m good.');
+  correctAnswer++;
+  console.log('User has this many correct answers:',correctAnswer);
 };
 
 // fourth question
@@ -45,6 +54,8 @@ console.log('Does user have two cats? User answered:',userHasCats);
 
 if (userHasCats === 'YES' || userHasCats === 'Y') {
   alert('Yes, ' + userName + ', I do have two cats. I promise I try not to be a crazy cat lady most of the time.');
+  correctAnswer++;
+  console.log('User has this many correct answers:',correctAnswer);
 } else if (userHasCats === 'NO' || userHasCats === 'N') {
   alert('Wrong! I adopted two cats last year.');
 };
@@ -56,6 +67,8 @@ console.log('Do I volunteer for CARE? User answered:',userCareVolunteer);
 
 if (userCareVolunteer === 'YES' || userCareVolunteer === 'Y') {
   alert('Yes, I volunteer virtually for an animal sanctuary called CARE Rescue Texas. Although my volunteer days are probably over for a few months now.');
+  correctAnswer++;
+  console.log('User has this many correct answers:',correctAnswer);
 } else if (userCareVolunteer === 'NO' || userCareVolunteer === 'N') {
   alert('False! I volunteer virtually for an animal sanctuary called CARE Rescue Texas. Random, I know.');
 };
@@ -87,6 +100,8 @@ while (counter <= 4) {
       alert('Sorry, too high! You have ' + (5 - counter) + ' more tries.');
     } else if (favoriteNumber === 17) {
       alert('You are correct! 17 is my favorite number.');
+      correctAnswer++;
+      console.log('User has this many correct answers:',correctAnswer);
       break;
     } else {
       alert('That\'s not exactly a number, ' + userName + '.');
@@ -101,7 +116,6 @@ while (counter <= 4) {
   console.log('User guessed this many times:',counter);
   break;
 };
-*/
 
 // seventh question that has multiple possible correct answers in an array
 
@@ -119,6 +133,8 @@ while (placesCounter <= 7) {
     if (answer.toLowerCase() === placesVisited[i].toLowerCase()) {
       alert('Yes, I have visited that country! In fact, I have visited ' + placesVisited[0] + ', ' + placesVisited[1] + ', ' + placesVisited[2] + ', ' + placesVisited[3] + ', ' + placesVisited[4] + ', and ' + placesVisited[5] + '.');
       flag = true;
+      correctAnswer++;
+      console.log('User has this many correct answers:',correctAnswer);
       break;
     }
   }
@@ -134,7 +150,12 @@ while (placesCounter <= 7) {
   }
 }
 
-
+// Correct answers
+if (correctAnswer === 7){
+  alert(userName + ', you got 7 out of 7 questions correct! Good job!');
+} else {
+  alert(userName + ', you got ' + correctAnswer + ' out of 7 questions correct. Better luck next time.');
+}
 
 
 
