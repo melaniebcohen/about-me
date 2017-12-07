@@ -8,8 +8,6 @@ alert('Welcome, ' + userName + '! We\'re going to play a guessing game. Get read
 // page tally for correct answers
 var correctAnswer = 0;
 
-//array
-
 // first question
 var userHomeYorN = prompt('Yes or No: I am from Seattle, Washington.');
 userHomeYorN = userHomeYorN.toUpperCase();
@@ -133,7 +131,7 @@ while (placesCounter <= 7) {
 
   for(var i = 0; i < placesVisited.length; i++) {
     if (answer.toLowerCase() === placesVisited[i].toLowerCase()) {
-      alert('Yes, I have visited that country! In fact, I have visited ' + placesVisited[0] + ', ' + placesVisited[1].toUpperCase() + ', ' + placesVisited[2] + ', ' + placesVisited[3] + ', ' + placesVisited[4] + ', and ' + placesVisited[5] + '.');
+      alert('Yes, I have visited that country! In fact, I have visited ' + placesVisited[0] + ', ' + placesVisited[1] + ', ' + placesVisited[2] + ', ' + placesVisited[3] + ', ' + placesVisited[4] + ', and ' + placesVisited[5] + '.');
       flag = true;
       correctAnswer++;
       console.log('User has this many correct answers:',correctAnswer);
