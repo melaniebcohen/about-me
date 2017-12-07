@@ -74,15 +74,17 @@ if (userCareVolunteer === 'YES' || userCareVolunteer === 'Y') {
 };
 
 // sixth question that takes a numeric input to guess a number
-var favoriteNumber;
+var randomNumberGuess;
 var counter = 1;
+var randomNumber = Math.floor(Math.random() * 20);
+console.log('Randomly generated number:',randomNumber);
 
 while (counter <= 4) {
-  while (favoriteNumber !== 17) {
-    favoriteNumber = parseInt(prompt('What is my favorite number?'));
-    console.log('User guessed:',favoriteNumber);
+  while (randomNumberGuess !== randomNumber) {
+    randomNumberGuess = parseInt(prompt('Can you guess a randomly generated number?'));
+    console.log('User guessed:',randomNumberGuess);
 
-    if (favoriteNumber < 17) {
+    if (randomNumberGuess < randomNumber) {
       if (counter === 4) {
         alert('You have no more tries!');
         break;
@@ -90,7 +92,7 @@ while (counter <= 4) {
         counter++;
       }
       alert('Sorry, too low! You have ' + (5 - counter) + ' more tries.');
-    } else if (favoriteNumber > 17) {
+    } else if (randomNumberGuess > randomNumber) {
       if (counter === 4) {
         alert('You have no more tries!');
         break;
@@ -98,8 +100,8 @@ while (counter <= 4) {
         counter++;
       }
       alert('Sorry, too high! You have ' + (5 - counter) + ' more tries.');
-    } else if (favoriteNumber === 17) {
-      alert('You are correct! 17 is my favorite number.');
+    } else if (randomNumberGuess === randomNumber) {
+      alert('You are correct! ' + randomNumber + ' was the random number.');
       correctAnswer++;
       console.log('User has this many correct answers:',correctAnswer);
       break;
@@ -156,26 +158,3 @@ if (correctAnswer === 7){
 } else {
   alert(userName + ', you got ' + correctAnswer + ' out of 7 questions correct. Better luck next time.');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//foo
