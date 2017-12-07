@@ -59,7 +59,7 @@ if (userCareVolunteer === 'YES' || userCareVolunteer === 'Y') {
 } else if (userCareVolunteer === 'NO' || userCareVolunteer === 'N') {
   alert('False! I volunteer virtually for an animal sanctuary called CARE Rescue Texas. Random, I know.');
 };
-*/
+
 // sixth question that takes a numeric input to guess a number
 var favoriteNumber;
 var counter = 1;
@@ -76,7 +76,6 @@ while (counter <= 4) {
       } else {
         counter++;
       }
-      console.log(counter);
       alert('Sorry, too low! You have ' + (5 - counter) + ' more tries.');
     } else if (favoriteNumber > 17) {
       if (counter === 4) {
@@ -85,10 +84,9 @@ while (counter <= 4) {
       } else {
         counter++;
       }
-      console.log(counter);
-      alert('Sorry, too high!  You have ' + (5 - counter) + ' more tries.');
+      alert('Sorry, too high! You have ' + (5 - counter) + ' more tries.');
     } else if (favoriteNumber === 17) {
-      alert('You are correct!');
+      alert('You are correct! 17 is my favorite number.');
       break;
     } else {
       alert('That\'s not exactly a number, ' + userName + '.');
@@ -98,18 +96,43 @@ while (counter <= 4) {
       } else {
         counter++;
       }
-      console.log(counter);
     };
   }
   console.log('User guessed this many times:',counter);
   break;
 };
+*/
 
+// seventh question that has multiple possible correct answers in an array
 
+var placesVisited = ['japan','france','norway','canada','italy','mexico'];
+var flag;
+var placesCounter = 1;
 
+while (placesCounter <= 7) {
+  var answer = prompt('Can you guess a country I\'ve visted?');
+  console.log('User entered the following country:',answer);
 
+  // Question: How do I do this without putting everything to lowercase?
 
-
+  for(var i = 0; i < placesVisited.length; i++) {
+    if (answer.toLowerCase() === placesVisited[i].toLowerCase()) {
+      alert('Yes, I have visited that country! In fact, I have visited ' + placesVisited[0] + ', ' + placesVisited[1] + ', ' + placesVisited[2] + ', ' + placesVisited[3] + ', ' + placesVisited[4] + ', and ' + placesVisited[5] + '.');
+      flag = true;
+      break;
+    }
+  }
+  if (flag) {
+    break;
+  }
+  if(!flag && placesCounter < 7) {
+    placesCounter++;
+    alert('No, I have not visited that country. You have ' + (8 - placesCounter) + ' more tries.');
+  } else if (!flag && placesCounter === 7) {
+    alert('You have no more tries! But just so you know, I have visited ' + placesVisited[0] + ', ' + placesVisited[1] + ', ' + placesVisited[2] + ', ' + placesVisited[3] + ', ' + placesVisited[4] + ', and ' + placesVisited[5] + '.');
+    break;
+  }
+}
 
 
 
