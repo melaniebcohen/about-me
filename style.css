@@ -1,3 +1,6 @@
+* {
+  outline: dotted 1px orange;
+}
 body {
   background-color: #fff;
   font-family: avenir, sans-serif;
@@ -5,29 +8,71 @@ body {
   margin: 0px;
 }
 header {
-  background-color: #B2DFDB;
-  padding: 10px 0px 10px 30px;
-  text-align: center;
+  background-color: #1B6479;
+  height: 70px;
+  border-bottom: solid 10px black;
 }
-h1 {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+header div {
+  width: 960px;
+  margin: 0 auto;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+header h1 {
+  float: left;
+  margin: 20px 20px 20px 0px;
+  font-size: 27px;
+  font-weight: bold;
+}
+header li {
+  display: inline-block;
+  margin: 22px 20px 20px 0px;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
 }
 main {
-  position: block;
   background-color: #fff;
-  padding: 30px;
+  width: 960px;
+  margin: 30px auto;
+}
+main h3 {
+  font-size: 20px;
+  font-weight: bold;
 }
 .portfolio-thumbnails {
-  text-align: center;
-  display: inline-block;
+  float: left;
+  margin: 10px 30px 10px 0px;
 }
-.portfolio-container {
+.portfolio-thumbnails:last-child {
+  margin-right: 0;
+}
+.portfolio-thumbnails p {
   text-align: center;
+  margin: 10px 0px 10px 0px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #777;
+}
+.bio section {
+  margin: 0px 0px 10px 0px;
+}
+.bio p {
+  margin: 10px 0px 10px 0px;
+}
+.top10 h3 {
+  margin: 0px 0px 10px 0px;
+  padding: 5px 0px 0px 0px;
+}
+ol {
+  list-style-type: decimal;
+  margin: 10px 0px 0px 25px;
+}
+ol li {
+  padding: 5px 0px 10px 5px;
+}
+li:last-child {
+  padding-bottom: 0px;
 }
 footer {
   background-color: #1B6479;

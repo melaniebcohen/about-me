@@ -2,48 +2,59 @@
 <html>
   <head>
     <title>About Me - Melanie Cohen</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1>Melanie Cohen</h1>
-      <p>Code Fellows Student</p>
+      <div>
+        <h1>Melanie Cohen</h1>
+        <nav>
+          <ul>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#top10">Top 10</a></li>
+          <ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section>
-        <h3>Student Biography</h3>
-        <ul>
-          <li>
-            <p>I was born and raised in Seattle, Washington and have lived here my entire life, apart from a short time spent in Portland, Oregon for school.</p>
-          </li>
-          <li>
-            <p>The majority of my career thus far has been spent in sales operations. The past year, however, I moved into a product/program management role at a local startup. Working with devs is a lot more fun than working with salespeople!</p>
-          </li>
-          <li>
-            <p>I am attending Code Fellows to gain a deeper understanding of the software development process. I also just really want to learn how to do all of this!</p>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h3>Student Portfolio</h3>
-        <div class="portfolio-container">
+        <h3 id="portfolio">Student Portfolio</h3>
+        <div>
           <ul>
             <li class="portfolio-thumbnails">
-              <img src="http://placehold.it/150x150">
+              <img src="http://placehold.it/300x300">
               <p>Project 1</p>
             </li>
             <li class="portfolio-thumbnails">
-              <img src="http://placehold.it/150x150">
+              <img src="http://placehold.it/300x300">
               <p>Project 2</p>
             </li>
             <li class="portfolio-thumbnails">
-              <img src="http://placehold.it/150x150">
+              <img src="http://placehold.it/300x300">
               <p>Project 3</p>
             </li>
           </ul>
         </div>
       </section>
-      <section>
+      <section class="bio">
+          <div>
+            <h3>Student Biography</h3>
+          <ul>
+            <li>
+              <p>I was born and raised in Seattle, Washington and have lived here my entire life, apart from a short time spent in Portland, Oregon for school.</p>
+            </li>
+            <li>
+              <p>The majority of my career thus far has been spent in sales operations. The past year, however, I moved into a product/program management role at a local startup. Working with devs is a lot more fun than working with salespeople!</p>
+            </li>
+            <li>
+              <p>I am attending Code Fellows to gain a deeper understanding of the software development process. I also just really want to learn how to do all of this!</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="top10">
         <h3>Top 10 Dream Travel Locations</h3>
           <ol>
             <li>Norway</li>
@@ -60,6 +71,6 @@
       </section>
     </main>
     <footer>&copy; 2017</footer>
-    <script src="app.js"></script>
+    <!--<script src="app.js"></script>-->
   </body>
 </html>
