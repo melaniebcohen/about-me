@@ -15,13 +15,13 @@ header div {
 }
 header h1 {
   float: left;
-  margin: 20px 20px 20px 0px;
+  margin: 25px 20px 20px 0px;
   font-size: 27px;
   font-weight: bold;
 }
 header li {
   display: inline-block;
-  margin: 22px 20px 20px 0px;
+  margin: 27px 20px 20px 0px;
 }
 header a {
   color: white;
@@ -51,22 +51,24 @@ main h3 {
   font-size: 15px;
   color: #777;
 }
-.bio section {
+#bio section {
   margin: 0px 0px 10px 0px;
+  max-width: 960px
+
 }
-.bio p {
+#bio p {
   margin: 10px 0px 10px 0px;
 }
-.top10 h3 {
+#top10 h3 {
   margin: 0px 0px 10px 0px;
-  padding: 5px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
 }
 ol {
   list-style-type: decimal;
   margin: 10px 0px 0px 25px;
 }
 ol li {
-  padding: 5px 0px 10px 5px;
+  padding: 5px 0px 5px 5px;
 }
 li:last-child {
   padding-bottom: 0px;
